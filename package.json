@@ -1,0 +1,28 @@
+{
+  "name": "ts_poketodoapp",
+  "version": "1.0.0",
+  "description": "ポケモン用いて、Todoを消化するたびに自身の成長を可視化できるアプリ",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=development",
+    "start": "webpack serve --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rikuya98/ts_PokeTodoApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rikuya98/ts_PokeTodoApp/issues"
+  },
+  "homepage": "https://github.com/rikuya98/ts_PokeTodoApp#readme",
+  "devDependencies": {
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

@@ -3,9 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Hello typescript</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="output"></div>
+    <h1>PokeTodoApp</h1>
+      <input type="text" id="task">
+      <select name="types" id="taskType">
+        <option value="description">種別</option>
+        <option value="inputType">INPUT</option>
+        <option value="outputType">OUTPUT</option>
+      </select>
+      <button id="addBtn">+</button>
+    <h2>タスク一覧</h2>
+    <div id="tasklist">
+    </div>
     <script src="bundle.js"></script>
   </body>
 </html>

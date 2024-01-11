@@ -7,6 +7,19 @@
   </head>
   <body>
     <h1>PokeTodoApp</h1>
+    <div class="userCreateContainer">
+      <h3>ユーザー作成</h3>
+      <input type="text" id="pokeId">
+      <button id="pokeSearch">検索</button>
+    </div>
+    <div class="userStatusContainer">
+      <h3>ユーザー情報</h3>
+      <img src="" alt="" id="userImg">
+      <p id="userName"></p>
+      <p id="userLevel"></p>
+      <p id="userExp"></p>
+    </div>
+    <h3>タスクを作成</h3>
       <input type="text" id="task">
       <select name="types" id="taskType">
         <option value="description">種別</option>
@@ -14,9 +27,19 @@
         <option value="outputType">OUTPUT</option>
       </select>
       <button id="addBtn">+</button>
-    <h2>タスク一覧</h2>
+    <h3>タスク一覧</h3>
     <div id="tasklist">
     </div>
+    <dialog id="createUserDialog">
+        <h3>ユーザー作成</h3>
+        <img src="" alt="" id="checkPokeImg">
+        <p id="checkPokeName"></p>
+        <p>このポケモンで良いですか？</p>
+        <button id="createUserBtn">作成</button>
+        <button id="returnBtn">戻る</button>
+    </dialog>
+
+
     <script src="bundle.js"></script>
   </body>
 </html>

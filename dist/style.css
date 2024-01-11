@@ -4,3 +4,9 @@ li {
 .done {
     text-decoration: line-through;
 }
+.userCreateContainer{
+    display: block;
+}
+.userStatusContainer{
+    display: none;
+}

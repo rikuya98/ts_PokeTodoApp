@@ -29,4 +29,8 @@ export class Task {
         this.taskLabel.classList.remove('done')
        }
     }
+
+    isChecked(): boolean {
+        return this.taskChecked.checked;
+    }
 }

@@ -12,7 +12,7 @@ export class Pokemon {
         this.pokeExp = 0;
     }
 
-    userSetData() {
+    userSetData() :Pokemon {
         const userPokeName = document.querySelector('#userName')! as HTMLParagraphElement;
         const userPokeImg = document.querySelector('#userImg')! as HTMLImageElement;
         const userPokeLv = document.querySelector('#userLevel')! as HTMLParagraphElement;
@@ -21,5 +21,13 @@ export class Pokemon {
         userPokeImg.src = this.pokeImg;
         userPokeLv.textContent = `Lv.${this.pokeLv}`;
         userPokeExp.textContent = `${this.pokeExp}`;
+        return this;
+    }
+
+    updateMeter(counterValue: number) {
+        const meter = document.querySelector('#meter')! as SVGElement;
+        const maxWidth = 200;
+        const newWidth = (maxWidth / 10) * counterValue;
+        meter.setAttribute('width', `${newWidth}`);
     }
 }

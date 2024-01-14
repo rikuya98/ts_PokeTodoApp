@@ -1,10 +1,31 @@
 import { Task } from './task';
 
 export class TaskManager {
+    taskList: Task[] = [];
+
     taskContainer: HTMLDivElement =  document.getElementById('tasklist')! as HTMLDivElement;
     appendTask(task: Task) {
-        this.taskContainer.append(task.taskFrame);
-        this.taskContainer.append(task.taskChecked);
-        this.taskContainer.append(task.taskLabel);
+        this.taskList.push(task);
+        task.taskFrame.appendChild(task.taskChecked);
+        task.taskFrame.appendChild(task.taskLabel);
+        this.taskContainer.appendChild(task.taskFrame);
+        // this.taskContainer.append(task.taskChecked);
+        // this.taskContainer.append(task.taskLabel);
+    }
+
+    expConversion(){
+        this.appendTask
+    }
+
+    removeCompletedTasks(): number {
+        const completedTasks = this.taskList.filter(task => task.isChecked());
+        var expCount :number = 0;
+        debugger
+        completedTasks.forEach((task) => {
+            task.taskFrame.remove();
+            expCount = expCount ++;
+        });
+        this.taskList = this.taskList.filter(task => !task.isChecked());
+        return expCount;
     }
 }

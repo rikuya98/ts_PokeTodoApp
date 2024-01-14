@@ -17,6 +17,10 @@
       <img src="" alt="" id="userImg">
       <p id="userName"></p>
       <p id="userLevel"></p>
+      <svg width="210"height="50">
+        <rect width="200" height="10" x="5" y="5" fill="none" stroke="black" stroke-width="2"></rect>
+        <rect id="meter" width="0" height="10" x="5" y="5" fill="blue"></rect>
+      </svg>
       <p id="userExp"></p>
     </div>
     <h3>タスクを作成</h3>
@@ -30,6 +34,7 @@
     <h3>タスク一覧</h3>
     <div id="tasklist">
     </div>
+    <button id="taskComplete">タスク完了</button>
     <dialog id="createUserDialog">
         <h3>ユーザー作成</h3>
         <img src="" alt="" id="checkPokeImg">

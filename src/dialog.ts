@@ -1,3 +1,4 @@
+// ダイアログの表示・非表示を制御する関数を定義
 const createUserDialog = document.querySelector('#createUserDialog')! as HTMLDialogElement;
 const pokeNameElement = document.querySelector('#checkPokeName')! as HTMLParagraphElement;
 const pokeImageElement = document.querySelector('#checkPokeImg')! as HTMLImageElement;
@@ -13,4 +14,3 @@ function closeCreateUserDialog() {
 }
 
 export { openCreateUserDialog, closeCreateUserDialog, pokeNameElement, pokeImageElement }
-

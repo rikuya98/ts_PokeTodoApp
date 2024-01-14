@@ -1,3 +1,4 @@
+// PokeAPIからデータを取得する関数を定義する
 const baseUri: string = "https://pokeapi.co/api/v2/pokemon/"
 const nameUri: string = "https://pokeapi.co/api/v2/pokemon-species/"
 interface PokemonLanguageEntry {

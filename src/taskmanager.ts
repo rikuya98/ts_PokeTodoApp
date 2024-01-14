@@ -9,8 +9,6 @@ export class TaskManager {
         task.taskFrame.appendChild(task.taskChecked);
         task.taskFrame.appendChild(task.taskLabel);
         this.taskContainer.appendChild(task.taskFrame);
-        // this.taskContainer.append(task.taskChecked);
-        // this.taskContainer.append(task.taskLabel);
     }
 
     expConversion(){

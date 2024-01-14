@@ -2,11 +2,9 @@ export class Task {
     taskFrame : HTMLDivElement;
     taskLabel: HTMLLabelElement;
     taskChecked: HTMLInputElement;
-    taskType: string;
     uuid: string;
 
-    constructor(taskName: string, taskType: string) {
-        this.taskType = taskType;
+    constructor(taskName: string) {
         this.uuid = crypto.randomUUID();
         this.taskLabel = document.createElement('label');
         this.taskLabel.textContent = taskName;

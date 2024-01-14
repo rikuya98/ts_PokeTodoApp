@@ -25,7 +25,7 @@ pokeSearch.addEventListener('click', async () => {
 addBtn.addEventListener('click', () => {
     const taskName = document.querySelector('#task')! as HTMLInputElement;
     const taskType = document.querySelector('#taskType')! as HTMLSelectElement;
-    const task = new Task(taskName.value, taskType.value);
+    const task = new Task(taskName.value);
     taskManager.appendTask(task);
     taskName.value = '';
 });

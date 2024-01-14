@@ -14,7 +14,6 @@ const userStatusContainer = document.querySelector('.userStatusContainer')! as H
 const userCreateContainer = document.querySelector('.userCreateContainer')! as HTMLDivElement;
 const taskCompleteBtn = document.querySelector('#taskComplete')! as HTMLButtonElement;
 var userPokemon :Pokemon  | null = null;
-
 pokeSearch.addEventListener('click', async () => {
     const pokeId = document.querySelector('#pokeId')! as HTMLInputElement;
     const PokeImg = await showPokeData(pokeId.value)
@@ -49,12 +48,11 @@ createUserBtn.addEventListener('click', () => {
 }});
 
 taskCompleteBtn.addEventListener('click', () => {
-    debugger
-    const expCount =taskManager.removeCompletedTasks();
     if (!userPokemon) {
         console.error('ポケモンのデータがありません');
       return;
     }
+    const expCount = taskManager.removeCompletedTasks(userPokemon.pokeExp);
     userPokemon.pokeExp = expCount;
     userPokemon.updateMeter(expCount);
 });

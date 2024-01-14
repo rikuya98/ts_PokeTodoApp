@@ -20,7 +20,6 @@ export class Pokemon {
         userPokeName.textContent = this.pokeName;
         userPokeImg.src = this.pokeImg;
         userPokeLv.textContent = `Lv.${this.pokeLv}`;
-        userPokeExp.textContent = `${this.pokeExp}`;
         return this;
     }
 

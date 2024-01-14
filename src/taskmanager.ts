@@ -15,13 +15,12 @@ export class TaskManager {
         this.appendTask
     }
 
-    removeCompletedTasks(): number {
+    removeCompletedTasks(pokeExp: number): number {
         const completedTasks = this.taskList.filter(task => task.isChecked());
-        var expCount :number = 0;
-        debugger
+        var expCount :number = pokeExp;
         completedTasks.forEach((task) => {
             task.taskFrame.remove();
-            expCount = expCount ++;
+            expCount = ++expCount;
         });
         this.taskList = this.taskList.filter(task => !task.isChecked());
         return expCount;
